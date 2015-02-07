@@ -1,3 +1,5 @@
 # mailmate-scripts
 
-The MacVim bundle for MailMate (http://freron.com).
+@ https://github.com/oshaughnessy/mailmate-scripts
+
+Handy scripts when you use MailMate (http://freron.com).
