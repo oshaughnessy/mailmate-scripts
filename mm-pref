@@ -1,7 +1,7 @@
 #!/bin/ksh
 
 ##
-# mm-browser: set the web browser to call when clicking links in MailMate
+# mm-pref: a handy way to set MailMate preferences.
 # 
 # Original author: O'Shaughnessy Evans <shaug+mailmate@wumpus.org>
 ##
