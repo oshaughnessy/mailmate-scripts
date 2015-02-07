@@ -1,0 +1,29 @@
+#!/bin/ksh
+
+##
+# mm-browser: set the web browser to call when clicking links in MailMate
+# 
+# Original author: O'Shaughnessy Evans <shaug+mailmate@wumpus.org>
+##
+
+typeset -r pref=$1
+typeset -r app_id=com.freron.MailMate
+typeset pref_id=
+
+case $pref in
+MmQuickSearchEnabled)
+    pref_id="MmQuickSearchEnabled"
+    pref_assign="-bool YES"
+    ;;
+*)
+    print "MailMate preferences:"
+    defaults read $app_id
+    exit 0
+    ;;
+esac
+
+if [[ -n "$pref_id" ]]; then
+    defaults write $app_id $pref_id $pref_assign
+fi
+
+defaults read $app_id $pref_id
